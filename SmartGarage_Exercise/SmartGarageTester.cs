@@ -12,57 +12,10 @@ namespace SmartGarage_Exercise
 	/// </summary>
 	public static class SmartGarageTester
 	{
-		// --- פונקציות קיימות ומסורבלות (מכילות קוד מלא אך בעייתי) ---
-		// --- חלק ממשימתכם הוא למחוק את הפונקציות הבאות ---
-
-		/// <summary>
-		/// (פונקציה ישנה למחיקה) מתדלק רק מערך של מכוניות.
-		/// </summary>
-		public static void RefuelAllCars(Car[] cars)
-		{
-			Console.WriteLine("\n--- Commencing car refueling cycle ---");
-			foreach (var car in cars)
-			{
-				car.Refuel();
-			}
-		}
-
-		/// <summary>
-		/// (פונקציה ישנה למחיקה) טוענת רק מערך של רובוטים.
-		/// </summary>
-		public static void ChargeAllRobots(CleaningRobot[] robots)
-		{
-			Console.WriteLine("\n--- Commencing robot charging cycle ---");
-			foreach (var robot in robots)
-			{
-				robot.ChargeBattery();
-			}
-		}
-
-		/// <summary>
-		/// (פונקציה ישנה למחיקה) מזיזה ימינה 3 סוגי מערכים נפרדים.
-		/// </summary>
-		public static void MoveAllRight(Car[] cars, Motorcycle[] bikes, CleaningRobot[] robots)
-		{
-			Console.WriteLine("\n--- Moving all units right ---");
-			foreach (var car in cars)
-			{
-				car.MoveRight();
-			}
-			foreach (var bike in bikes)
-			{
-				bike.MoveRight();
-			}
-			foreach (var robot in robots)
-			{
-				robot.MoveRight();
-			}
-		}
-
 		// --- פונקציות יעד חדשות (מכילות רק חתימה והערות) ---
 		// --- עליכם לגרום לקוד הבא (שנמצא בהערה) לעבוד ---
 
-		/*
+		
         /// <summary>
         /// (פונקציה למשימה ד') בודקת מערך פולימורפי של כלי רכב.
         /// הפונקציה הזו מסופקת לכם במלואה כדוגמה.
@@ -83,9 +36,7 @@ namespace SmartGarage_Exercise
                 v.Refuel(); 
             }
         }
-        */
 
-		/*
         // -----------------------------------------------------------------
         // --- משימת האתגר המרכזית (מימוש ע"י התלמידים) ---
         // -----------------------------------------------------------------
@@ -118,12 +69,18 @@ namespace SmartGarage_Exercise
         {
             Console.WriteLine("\n--- Commencing Movable/Chargeable test ---");
 
-            // <-- התלמידים צריכים לממש את הלוגיקה כאן -->
+            foreach (var m in movables)
+            {
+                m.MoveRight();
+                if (m is IChargable c)
+                {
+                    c.ChargeBattery();
+                }
+            }
             
 
             Console.WriteLine("--- Movable/Chargeable test complete ---");
         }
-        */
 	}
 
 }
