@@ -9,7 +9,7 @@ namespace SmartGarage_Exercise
 	/// <summary>
 	/// מייצג אופנוע בעל מנוע דלק.
 	/// </summary>
-	public class Motorcycle:Vehicle, IMovable
+	public class Motorcycle:Vehicle
 	{
 
 		/// <summary>

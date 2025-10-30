@@ -12,7 +12,7 @@
 			// -----------------------------------------------------------------
             Car car1 = new Car("carModel", 90);
             Motorcycle bike1 = new Motorcycle("bikeModel", 85);
-            CleaningRobot robot1 = new CleaningRobot("1234", 87);
+            CleaningRobot robot1 = new CleaningRobot("1234", 87);//
 			
             Console.WriteLine("\n\n--- Welcome to Smart Garage (v2.0 - Refactored!) ---");
 

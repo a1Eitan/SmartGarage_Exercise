@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartGarage_Exercise
 {
-    public abstract class Vehicle
+    public abstract class Vehicle:IMovable
     {
         public string ModelName
         {
@@ -37,17 +37,11 @@ namespace SmartGarage_Exercise
         /// <summary>
         /// מזיז את כלי הרכב שמאלה.
         /// </summary>
-        public virtual void MoveLeft()
-        {
-            Console.WriteLine($"Vehicle {ModelName} turns left.");
-        }
+        public abstract void MoveLeft();
 
         /// <summary>
         /// מזיז את כלי הרכב ימינה.
         /// </summary>
-        public virtual void MoveRight()
-        {
-            Console.WriteLine($"Vehicle {ModelName} turns right.");
-        }
+        public abstract void MoveRight();
     }
 }

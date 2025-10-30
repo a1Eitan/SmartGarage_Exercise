@@ -10,7 +10,7 @@ namespace SmartGarage_Exercise;
 		/// <summary>
 		/// מייצגת מכונית בעלת מנוע דלק.
 		/// </summary>
-		public class Car:Vehicle, IMovable
+		public class Car:Vehicle
 		{
 			/// <summary>
 			/// בנאי ליצירת מכונית חדשה.
